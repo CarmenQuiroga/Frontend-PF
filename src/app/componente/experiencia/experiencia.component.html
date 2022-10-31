@@ -1,0 +1,39 @@
+<head>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css"
+    integrity="sha384-/frq1SRXYH/bSyou/HUp/hib7RVN1TawQYja658FEOodR/FQBKVqT9Ol+Oz3Olq5" crossorigin="anonymous">
+
+</head>
+
+<div class="row">
+    <h1>Experiencia</h1>
+     <div class="divider"></div>
+    <div class="contain ">
+      <button type="button" class="btn1 btn-dark" routerLink="/nuevaexp" *ngIf="isLogged">
+       Nueva Experiencia
+      </button>
+
+    </div>
+        <div class="col lg 1 col-md-1 col-sm-1"></div>
+        <div class="col-lg-11 col-md-11 col-sm-11">
+        <table class="table">
+           <tbody>
+              <tr *ngFor="let Experiencia of expe">
+                <td><h4>{{Experiencia.nombreE}}</h4>
+                  <tr >
+                    <p>{{Experiencia.descripcionE}}</p>
+                  </tr> </td>
+                  <td>{{Experiencia.fechaE}}</td>
+                <td>{{Experiencia.tareaE}}</td>
+                <td *ngIf="isLogged"><button class="btn btn-light" routerLink="/editexp/{{Experiencia.id}}" >
+                  <i data-fa-symbol="edit" class="fas fa-pencil fa-fw"></i>EDITAR</button> </td>
+                <td *ngIf="isLogged"><button class="btn btn-danger" (click)="delete(Experiencia.id)">
+                  <i data-fa-symbol="delete" class="fas fa-trash fa-fw"></i> BORRAR</button></td>
+              </tr>
+
+          </tbody>
+        </table>
+
+        </div>
+
+        </div>
+

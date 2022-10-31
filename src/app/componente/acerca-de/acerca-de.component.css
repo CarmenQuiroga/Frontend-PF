@@ -1,0 +1,99 @@
+.row{
+  padding: 20px;
+
+}
+div{
+background: rgb(217, 190, 241);
+}
+
+.lead{
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+.contener{
+  background-color:rgb(214, 188, 237);
+  width: 100vw;
+  max-width: 1000px;
+  text-align: center;
+}
+@media(min-width: 575px){
+  #fotoperfil{
+    position: absolute;
+    width: 15%;
+    border-radius: 100%;
+    box-shadow: 3px 3px 3px grey;
+    left: 5%;
+    top: 390px;
+  }
+}
+@media(max-width: 576px){
+  #fotodeperfil{
+    position: absolute;
+    width: 15%;
+    border-radius: 100%;
+    box-shadow: 3px 3px 3px grey;
+    left: 5%;
+    top: 600px;
+  }
+}
+.info-content{
+
+  margin: auto;
+
+}
+.about{
+  display: flex;
+  grid-template-columns: repeat(10, 1fr);
+  width: 100vw;
+  align-items:left;
+ background: rgb(217, 190, 241);
+ margin: auto;
+
+
+}
+.about > img {
+  background-size: cover;
+  background-position: center;
+  width: 50%;
+  height: 50vh;
+  margin: auto;
+}
+.about-info {
+  height: 90vh;
+  width: 50%;
+  float: left;
+  margin:auto;
+  background-size: cover;
+  box-sizing: border-box;
+
+}
+.about-info > h3 {
+  font-size: 3em;
+  color:black;
+  display: flex;
+
+
+}
+.divider {
+  height: 4px;
+  width: 60px;
+  background-color: blueviolet;
+  margin-top: 5px;
+  margin-bottom: 2em;
+}
+.about p {
+ font-size: 19px;
+ font-family: "Latin Modern Roma";
+ font-style: italic;
+ line-height: 20px;
+  width: 50%;
+  background: rgb(217, 190, 241);
+  max-width: 100%;
+}
+.btn1{
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 30px;  box-shadow: 0 5px rgb(181, 181, 181);
+}

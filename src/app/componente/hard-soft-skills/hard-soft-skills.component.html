@@ -1,0 +1,51 @@
+<div class="row" *ngIf="skill">
+  <h1> Hard & Soft Skills</h1>
+  <div class="divider"></div>
+
+  <div class="contain mb-5" >
+    <button type="button" routerLink="/nuevaskill" class="btn1 btn-dark" *ngIf="isLogged">Nueva Skill</button>
+  </div>
+
+  <div class="text-center col-sm-4 col-md-4 col-lg-4 circulo" *ngFor="let skill of skill">
+
+    <circle-progress
+      [percent]="(skill.porcentaje)"
+      [radius]="100"
+      [space]="4"
+      [subtitle]="(skill.nombreSkill)"
+      [titleColor]="'#212F3C'"
+      [titleFontSize]="'40'"
+      [subtitleColor]="'#444444'"
+      [subtitleFontSize]="'18'"
+      [showTitle]="true"
+      [showUnits]="true"
+      [showSubtitle]="true"
+      [unitsFontSize]="'30'"
+      [outerStrokeWidth]="8"
+      [innerStrokeWidth]="2"
+      [outerStrokeColor]="'#3a0e8b'"
+      [innerStrokeColor]="'#FFFFF'"
+      [animation]="true"
+      [showBackground]="true"
+      [animationDuration]="600"
+      [backgroundPadding]="-10"
+      [backgroundGradient]="true"
+      [backgroundGradientStopColor]="'#a772b1'"
+
+
+    ></circle-progress>
+
+    <div>
+
+     <td *ngIf="isLogged">
+    <button class="btn btn-light" routerLink="/editskill/{{skill.id}}">
+      <i data-fa-symbol="edit" class="fas fa-pencil fa-fw"></i></button>
+     </td>
+      <td *ngIf="isLogged">
+        <button class="btn btn-danger" (click)="delete(skill.id)">
+        <i data-fa-symbol="delete" class="fas fa-trash fa-fw"></i></button>
+      </td>
+
+    </div>
+
+</div>

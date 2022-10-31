@@ -1,0 +1,41 @@
+import { ActivatedRoute, Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { Skill } from 'src/app/models/skill';
+import { SkillService } from 'src/app/servicio/skill.service';
+
+
+
+@Component({
+  selector: 'app-edit-skill',
+  templateUrl: './edit-skill.component.html',
+  styleUrls: ['./edit-skill.component.css']
+})
+export class EditSkillComponent implements OnInit {
+    skill: Skill = null;
+
+  constructor(private skillS: SkillService, private activatedRoute: ActivatedRoute, private router: Router) { }
+
+  ngOnInit(): void {
+    const id = this.activatedRoute.snapshot.params['id'];
+    this.skillS.detail(id).subscribe(
+      data => {
+        this.skill = data;
+      }, err => {
+        alert("Error al intentar modificar");
+        this.router.navigate(['']);
+      }
+    )
+  }
+
+  onUpdate(){
+    const id = this.activatedRoute.snapshot.params['id'];
+    this.skillS.update(id, this.skill).subscribe(
+      data => {
+        this.router.navigate(['']);
+      }, err => {
+        alert("Error al intentar modificar el Skill");
+        this.router.navigate(['']);
+      }
+    )
+  }
+}

@@ -1,0 +1,53 @@
+<head>
+  <link  type="text/css" href="inicio.component.css" rel="stylesheet" type="text/css">
+  <link type="text/css" rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css"
+    integrity="sha384-/frq1SRXYH/bSyou/HUp/hib7RVN1TawQYja658FEOodR/FQBKVqT9Ol+Oz3Olq5" crossorigin="anonymous">
+
+  <style type="text/css">
+    html,
+    body {
+      margin: 0px;
+      height: 100%;
+    }
+  </style>
+</head>
+
+<header class="p-3 bg-dark text-white">
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      <a class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none"><i
+          class="fa-solid fa-terminal "></i>
+        <h3>Argentina Programa #YoProgramo</h3>
+        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap" _mstaria-label="138918">
+          <use xlink:href="#bootstrap"></use>
+        </svg>
+      </a>
+      <ul  class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-3">
+        <li><a  class="nav-link px-2" ><i class="fa-brands fa-linkedin-in"></i></a></li>
+        <li><a  class="nav-link px-2"><i class="fa-brands fa-facebook"></i></a></li>
+        <li><a  class="nav-link px-2"><i class="fa-brands fa-github"></i></a></li>
+      </ul>
+
+      <div class="text-end">
+        <button type="button"  class="btn btn-outline-light me-2" _msthash="1717859"
+          _msttexthash="114478" (click)="login()" *ngIf="!isLogged">Ingresar</button>
+        <button type="button" class="btn btn-warning" _msthash="1718041" _msttexthash="183599" (click)="onLogOut()"*ngIf="isLogged">Cerrar Sesion</button>
+      </div>
+    </div>
+  </div>
+</header>
+<hr>
+
+<body>
+  <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"></div>
+  <div class="wrapper col-xs-4 col-sm-8 col-md-8 " >
+    <div class="banner col-lg-10"  style="position: relative; left: 50 ; margin-top: 0;" class="img-reponsive">
+
+      <img class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
+        src="../../../assets/FotosPF/R.jpg"
+        class="imgRedonda" style="width: 95% ; height: 430px"  />
+    </div>
+  </div>
+
+  <body>
+
